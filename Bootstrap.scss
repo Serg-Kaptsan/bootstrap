@@ -51,9 +51,9 @@ h2{
     font-size: 1.3rem;
     font-weight: 500;
 }
-.images{
-    margin-left: 25px;
-}
+// .images{
+//     margin-left: 25px;
+// }
 .img{
     position: relative;
     width: 350px;
@@ -257,9 +257,8 @@ footer{
     }
     footer{
         padding: 1.25rem 3.25rem;
-        height: 11.25rem;
-        justify-content: space-between !important;   
         .footer_block {
+            height: 8.75rem;
             flex-direction: column;
             & *{
             text-align: center;      
@@ -271,5 +270,14 @@ footer{
     header{
         padding: 0 .85rem;
     }
+    .block_top{
+        height: 22.62rem;
+    }
+    h1{
+        font-size: 3.125rem;
+        padding-top: 8.8rem;
+    }
+
+
 }
 
