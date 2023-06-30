@@ -23,9 +23,9 @@
             <div class="container">
                 <nav class="navbar navbar-expand-md justify-content-between position-relative">
                     <a class="navbar-brand text-white disabled">DesignCafé</a>
-                    <button class="navbar-toggler btn text-white border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fa-solid fa-bars"></i>
+                    <button class="navbar-toggler btn text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="button">
                         <i class="fa-solid fa-xmark"></i>
+                        <i class="fa-solid fa-bars"></i>
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                         <ul class="navbar-nav align-items-sm-center mobile-menu">
@@ -42,7 +42,16 @@
                                 <a class="nav-link" href="#">お知らせ</a>
                             </li>
                         </ul>
-                    </div>             
+                    </div>
+                    <!-- <script>
+                        const button = document.getElementById("button");
+                        if (button.getAttribute("aria-expanded") === 'false') {
+                          button.classList.add("xmark_invisible");
+                        }
+                        else {
+                          button.classList.add("xmark_visible");
+                        }
+                      </script>              -->
                 </nav>
             </div>
         </header>
@@ -54,20 +63,23 @@
                 <h2>Menu<br>
                     <span class="span_menu">メニュー</span>
                 </h2>
-                <div class="container text-center images">
-                    <div class="row">
-                      <div class="col">
+                <div class="container images">
+                    <div class="row img_container d-flex w-100 justify-content-between">
+                      <div class="col block_image d-flex justify-content-center">
                         <div class="img drink">
+                            <img src="imeges\drinks_1.jpg" alt="drink">
                             <div class="txt">Drink</div>
                         </div>
                       </div>
-                      <div class="col">
+                      <div class="col block_image d-flex justify-content-center">
                         <div class="img cakes">
+                            <img src="imeges\drinks_2.jpg" alt="cakes">
                             <div class="txt">Cakes</div>
                         </div>
                       </div>
-                      <div class="col">
+                      <div class="col block_image d-flex justify-content-center">
                         <div class="img foods">
+                            <img src="imeges\drinks_3.jpg" alt="foods">
                             <div class="txt">Foods</div>
                         </div>
                       </div>

@@ -51,15 +51,11 @@ h2{
     font-size: 1.3rem;
     font-weight: 500;
 }
-// .images{
-//     margin-left: 25px;
-// }
 .img{
     position: relative;
     width: 350px;
     height: 350px;
     margin-top: 30px;
-    // margin-left: 25px;
     border-radius: 50%;
     font-family: 'Georgia';
     font-weight: 400;
@@ -68,6 +64,7 @@ h2{
     color: black;
     border: 9px solid #81613B;
     overflow: hidden;
+    // justify-content: space-between;
 }
 .img .txt{
     position: absolute;
@@ -76,15 +73,6 @@ h2{
     padding-top: 23px;
     bottom: 0;
     background-color: rgba(255, 255, 255, 0.8);
-}
-.drink{
-    background-image: url("imeges/drinks_1.jpg");
-}
-.cakes{
-    background-image: url("imeges/drinks_2.jpg");
-}
-.foods{
-    background-image: url("imeges/drinks_3.jpg");
 }
 .btn-brand{
     text-align: center;
@@ -235,14 +223,17 @@ footer{
         padding: 50px;
         top: 60px;
     }
-    .navbar-toggler .fa-xmark{
+    // .navbar-toggler .fa-xmark{
+    //     display: block;
+    // }
+    .navbar-toggler.collapsed .fa-xmark{
+        display: none;
+    }
+    .navbar-toggler .fa-bars{
         display: none;
     }
     .navbar-toggler.collapsed .fa-bars{
         display: block;
-    }
-    .navbar-toggler.collapsed .fa-xmark{
-        display: none;
     }
     .nav-item a{
         color: #668E68;
@@ -253,41 +244,60 @@ footer{
 }
 @media(max-width:575px){
     header{
-        padding: 0 1.5rem;
+        padding: 0 1rem;
+    }
+    .block_top{
+        height: 22.62rem;
+        background-image: url("imeges/top_media.jpg");
     }
     h1{
-        font-size: 3.125rem;
         padding-top: 8.8rem;
+        font-size: 5rem;
+    }  
+    .block_middle{
+        height: 22.75rem;
+        background-image: url("imeges/bottom_media.jpg");
+    }
+    .txt_about{
+        padding-top: 2.125rem;
+    }
+    .btn-brand{
+        margin-top: 2.2rem;
     }
     footer{
         padding: 1.25rem 3.25rem;
-        .footer_block {
-            height: 8.75rem;
-            flex-direction: column;
-            & *{
+    }
+    .footer_block {
+        height: 8.75rem;
+        flex-direction: column;
+        & *{
             text-align: center;      
-            }
         }
+    }
+}
+@media(max-width:440px){
+    .img_container{
+        display: block;
+        min-width: 350px;
+    }
+    .block_image{
+        display: block;        
     }
 }
 @media(max-width:390px){
     header{
         padding: 0 .85rem;
     }
-    .block_top{
-        height: 22.62rem;
-    }
-    .block_middle{
-        height: 22.75rem;
-        button{
-            margin-top: 2.2rem;
-        }
-    }
-    .txt_about{
-        padding-top: 2.125rem;
+    h1{
+        font-size: 3.125rem;
     }
     .txt_news{
         padding-top: 3.125rem;
     }
+    .block_image{
+        padding: 0;
+    }
 }
-
+.navbar-toggler:focus {
+    box-shadow: 0 0 0  0 rgba(0, 0, 0, 0);
+}
